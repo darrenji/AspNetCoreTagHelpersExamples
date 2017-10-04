@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace AspNetCoreTagHelpersExamples.Infrastructure.TagHelpers
 {
+    [HtmlTargetElement("button", Attributes ="bs-button-color", ParentTag ="form")]
     public class ButtonTagHelper:TagHelper
     {
         //bs-button-color
