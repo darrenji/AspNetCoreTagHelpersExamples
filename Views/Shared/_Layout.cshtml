@@ -26,6 +26,9 @@
         <div class="panel-body bg-danger"><h2>This is Production</h2></div>
     </environment>
     <img src="~/images/city.jpg" asp-append-version="true" />
+    <cache expires-after="@TimeSpan.FromSeconds(15)" vary-by-route="action">
+        @await Component.InvokeAsync("Time")
+    </cache>
     <div>
         @RenderBody()
     </div>
