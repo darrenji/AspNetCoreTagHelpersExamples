@@ -4,7 +4,16 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Cites</title>
-    <link href="~/lib/bootstrap/dist/css/bootstrap.css"  rel="stylesheet"/>
+    <script asp-src-include="lib/jquery/dist/**/*.js" asp-src-exclude="**.min.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.4.min.js"
+            asp-fallback-src-include="/lib/jquery/dist/**/*.min.js"
+            asp-fallback-test="window.jQuery"></script>
+    <link asp-href-include="/lib/bootstrap/dist/**/.min.css" rel="stylesheet" />
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          asp-fallback-href-include="/lib/bootstrap/dist/**/*.min.css"
+          asp-fallback-test-class="btn"
+          asp-fallback-test-property="display"
+          asp-fallback-test-value="inline-block" rel="stylesheet" />
 </head>
 <body class="panel-body">
     @*<div show-for="Index" class="panel-body bg-danger">
